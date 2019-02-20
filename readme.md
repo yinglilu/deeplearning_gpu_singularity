@@ -6,6 +6,7 @@
 - quickly set up medial imaging deep learning research environment on Linux(singularity container based)
 - GPU acceleration (CUDA and cuDNN included)
 - supported frameworks and packages:
+
     - TensorFlow
     - Keras
     - PyTorch
@@ -21,12 +22,14 @@
 - your host system must has an NVIDIA GPU card and a driver installed(you don't need to install cuda and cudnn)
 
 - install singularity on your host
+
     ```bash
     # ubuntu
     sudo apt-get install -y singularity-container
     ```
 
 - pull singularity image from singularity hub
+
     ```bash
     singularity pull --name deeplearning_gpu.simg shub://yinglilu/deeplearning_gpu_singularity
     ```
@@ -98,18 +101,17 @@ sudo singularity build deeplearning_gpu.simg Singularity
 ## test 
 
 ```bash
-#test tensorflow
+# test tensorflow
 # -W ignore: ignore futurewarning
 singularity exec --nv deeplearning_gpu.simg python -W ignore -c "import tensorflow as tf; print('TensorFlow version: ' + tf.__version__)"
 
-#test keras
+# test keras
 singularity exec --nv deeplearning_gpu.simg python -W ignore -c "import tensorflow.keras as keras;print('Keras version: ' + keras.__version__)"
 
-#test pytorch
+# test pytorch
 singularity exec --nv deeplearning_gpu.simg python -c "import torch;print('pytorch version: ' + torch.__version__)"
 
-
-#test NiftyNet
+# test NiftyNet
 singularity exec --nv deeplearning_gpu.simg net_download
 
 singularity exec --nv deeplearning_gpu.simg python -c "import SimpleITK as sitk; print('SimpleITK version: ' +  sitk.Version_VersionString())"
