@@ -11,9 +11,10 @@
     - Keras
     - PyTorch
     - NiftyNet
+    - Scikit-learn
     - OpenCV
     - SimpleITK
-    - scikit-image
+    - Scikit-image
     - Anaconda packages: https://docs.anaconda.com/anaconda/packages/py3.6_linux-64/
 
 
