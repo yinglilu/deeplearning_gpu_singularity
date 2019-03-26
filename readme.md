@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/yinglilu/deeplearning_gpu_singularity.svg?style=svg)](https://circleci.com/gh/yinglilu/deeplearning_gpu_singularity)
 
 # medial imaging deep learning singularity container
 
