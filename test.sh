@@ -9,13 +9,15 @@ singularity exec --nv deeplearning_gpu.simg python -W ignore -c "import tensorfl
 singularity exec --nv deeplearning_gpu.simg python -c "import torch;print('pytorch version: ' + torch.__version__)"
 
 
-#test sonnet
-#singularity exec --nv deeplearning_gpu.simg python -c "import sonnet as snt;print('sonnet version: ' + snt.__version__)"
-
 # test NiftyNet
-singularity exec --nv deeplearning_gpu.simg net_download
+singularity exec --nv deeplearning_gpu.simg net_download -h
 
+# test simpleitk
 singularity exec --nv deeplearning_gpu.simg python -c "import SimpleITK as sitk; print('SimpleITK version: ' +  sitk.Version_VersionString())"
+
+# test opencv
 singularity exec --nv deeplearning_gpu.simg python -c "import cv2; print('Opencv version: ' + cv2.__version__)"
+
+# test skimage
 singularity exec --nv deeplearning_gpu.simg python -c "import skimage; print('skimage version: ' + skimage.__version__)"
 

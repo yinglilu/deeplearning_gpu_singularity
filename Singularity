@@ -1,22 +1,41 @@
 Bootstrap: docker
-From: continuumio/anaconda3:5.1.0
 #Python version: 3.6.4 
+From: continuumio/anaconda3:5.1.0
 
 %post
-/opt/conda/bin/conda update conda
+export PATH=/opt/conda/bin:$PATH
 
-/opt/conda/bin/conda install tensorflow-gpu
-/opt/conda/bin/pip install torch torchvision
-/opt/conda/bin/conda install theano pygpu
+#update
+apt-get update
+conda update conda
+pip install --upgrade pip
 
-#/opt/conda/bin/pip install mxnet
-#/opt/conda/bin/pip install dm-sonnet
+#tensorflow
+conda install tensorflow-gpu==1.12.0
+# conda install -c anaconda scikit-image==0.14.2
 
-#apt-get install openmpi-bin
-#export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu/openmpi/lib:$LD_LIBRARY_PATH
-#/opt/conda/bin/pip install cntk-gpu
+#pytorch
+conda install -c pytorch pytorch==1.0.1
+conda install -c pytorch torchvision==0.2.1
 
-/opt/conda/bin/pip install niftynet
-/opt/conda/bin/pip install opencv-python
-/opt/conda/bin/pip install SimpleITK
+#theano
+apt-get install -y build-essential
+conda install -c conda-forge theano==1.0.4
+conda install mkl-service
+
+#opencv
+conda install -c anaconda opencv==3.4.2
+
+#scikit-learn
+conda install -c anaconda scikit-learn==0.20.3
+
+#simpleitk
+conda install -c simpleitk simpleitk==1.2.0
+
+#niftynet
+conda install -c anaconda pyyaml==3.13
+pip install niftynet==0.5.0
+
+#niwidgets
+pip install niwidgets==0.1.3
 

@@ -1,8 +1,10 @@
-[![CircleCI](https://circleci.com/gh/yinglilu/deeplearning_gpu_singularity.svg?style=svg)](https://circleci.com/gh/yinglilu/deeplearning_gpu_singularity)
 
-# medial imaging deep learning singularity container
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/2388)
 
-## aim
+
+# A deep learning singularity container
+
+## Aim
 
 - quickly set up medial imaging deep learning research environment on Linux(singularity container based)
 - GPU acceleration (CUDA and cuDNN included)
@@ -103,20 +105,5 @@ sudo singularity build deeplearning_gpu.simg Singularity
 ## test 
 
 ```bash
-# test tensorflow
-# -W ignore: ignore futurewarning
-singularity exec --nv deeplearning_gpu.simg python -W ignore -c "import tensorflow as tf; print('TensorFlow version: ' + tf.__version__)"
-
-# test keras
-singularity exec --nv deeplearning_gpu.simg python -W ignore -c "import tensorflow.keras as keras;print('Keras version: ' + keras.__version__)"
-
-# test pytorch
-singularity exec --nv deeplearning_gpu.simg python -c "import torch;print('pytorch version: ' + torch.__version__)"
-
-# test NiftyNet
-singularity exec --nv deeplearning_gpu.simg net_download
-
-singularity exec --nv deeplearning_gpu.simg python -c "import SimpleITK as sitk; print('SimpleITK version: ' +  sitk.Version_VersionString())"
-singularity exec --nv deeplearning_gpu.simg python -c "import cv2; print('Opencv version: ' + cv2.__version__)"
-singularity exec --nv deeplearning_gpu.simg python -c "import skimage; print('skimage version: ' + skimage.__version__)"
+bash test.sh
 ```
