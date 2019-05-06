@@ -7,6 +7,7 @@ export PATH=/opt/conda/bin:$PATH
 
 #update
 apt-get update
+apt-get install -y tree
 conda update conda
 pip install --upgrade pip
 
@@ -15,8 +16,9 @@ conda install tensorflow-gpu==1.12.0
 # conda install -c anaconda scikit-image==0.14.2
 
 #pytorch
-conda install -c pytorch pytorch==1.0.1
-conda install -c pytorch torchvision==0.2.1
+
+conda install -c pytorch pytorch==1.1.0
+conda install -c pytorch torchvision==0.2.2
 
 #theano
 apt-get install -y build-essential
@@ -38,4 +40,3 @@ pip install niftynet==0.5.0
 
 #niwidgets
 pip install niwidgets==0.1.3
-
