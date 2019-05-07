@@ -6,9 +6,9 @@
 
 ## Aim
 
-- quickly set up medial imaging deep learning research environment on Linux(singularity container based)
+- Quickly set up medial imaging deep learning research environment on Linux(singularity container based)
 - GPU acceleration (CUDA and cuDNN included)
-- supported frameworks and packages:
+- Supported frameworks and packages:
 
     - TensorFlow
     - Keras
