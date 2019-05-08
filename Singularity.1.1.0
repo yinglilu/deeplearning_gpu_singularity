@@ -1,5 +1,7 @@
 #update:
-#pytorch 1.1.0
+
+# 2019-05-08
+# pytorch 1.1.0
 
 Bootstrap: docker
 #Python version: 3.6.4 
