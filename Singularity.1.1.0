@@ -26,9 +26,9 @@ conda install -c pytorch pytorch==1.1.0
 conda install -c pytorch torchvision==0.2.2
 
 #theano
-apt-get install -y build-essential
-conda install -c conda-forge theano==1.0.4
-conda install mkl-service
+#apt-get install -y build-essential
+#conda install -c conda-forge theano==1.0.4
+#conda install mkl-service
 
 #opencv
 conda install -c anaconda opencv==3.4.2
