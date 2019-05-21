@@ -35,7 +35,7 @@
 - pull singularity image from singularity hub
 
     ```bash
-    singularity pull --name deeplearning_gpu.simg shub://yinglilu/deeplearning_gpu_singularity
+    singularity pull --name deeplearning_gpu.simg shub://yinglilu/deeplearning_gpu_singularity:1.0.0
     ```
 
 ## usage
