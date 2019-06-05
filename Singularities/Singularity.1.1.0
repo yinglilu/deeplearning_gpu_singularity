@@ -1,7 +1,7 @@
 #-----------------------
 #updates:
 
-# 2019-05-13
+# 2019-06-05
 # pytorch 1.1.0
 #-----------------------
 
@@ -24,8 +24,7 @@ conda install tensorflow-gpu==1.12.0
 
 #pytorch
 
-conda install -c pytorch pytorch==1.1.0
-conda install -c pytorch torchvision==0.2.1
+conda install -c pytorch pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=10.0
 
 #theano
 #apt-get install -y build-essential
