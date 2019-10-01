@@ -1,0 +1,33 @@
+#-----------------------
+#updates:
+
+# 2019-10-01
+# pytorch==1.2.0
+
+#Python version: 3.7 
+From: continuumio/anaconda3:5.1.0
+
+%post
+export PATH=/opt/conda/bin:$PATH
+
+#update
+apt-get update
+apt-get install -y tree
+pip install --upgrade pip
+
+
+#pytorch
+conda install -c pytorch pytorch==1.2.0 torchvision cudatoolkit=10.0
+
+#opencv
+conda install -c anaconda opencv
+
+#scikit-learn
+conda install -c anaconda scikit-learn
+
+#simpleitk
+conda install -c simpleitk simpleitk
+
+#pillow
+conda install -c anaconda pillow 
+
