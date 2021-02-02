@@ -21,7 +21,7 @@
     - Anaconda packages: https://docs.anaconda.com/anaconda/packages/py3.6_linux-64/
 
 
-## pre-requisite
+## Pre-requisite
 
 - your host system must has an NVIDIA GPU card and a driver installed(you don't need to install cuda and cudnn)
 
@@ -38,7 +38,7 @@
     singularity pull --name deeplearning_gpu.simg shub://yinglilu/deeplearning_gpu_singularity:1.0.0
     ```
 
-## usage
+## Usage
 
 ### 1. enter into singularity container, run command in the container
 
